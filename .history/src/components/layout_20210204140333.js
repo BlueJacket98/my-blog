@@ -29,16 +29,9 @@ const Layout = props => {
               <li className="nav-home nav-current" role="menuitem">
                 <Link to={`/`}>Home</Link>
               </li>
-              <li className="nav-blog" role="menuitem">
-                <Link to={`/blog`}>Blog</Link>
+              <li className="nav-about" role="menuitem">
+                <Link to={`/about`}>About</Link>
               </li>
-              <li className="nav-projects" role="menuitem">
-                <Link to={`/projects`}>Projects</Link>
-              </li>
-              <li className="nav-portfolio" role="menuitem">
-                <Link to={`/portfolio`}>Portfolio</Link>
-              </li>
-
               <li className="nav-elements" role="menuitem">
                 <Link to={`/elements`}>Elements</Link>
               </li>
@@ -60,16 +53,21 @@ const Layout = props => {
                 Github
               </a>
               <a
-                href="https://leetcode-cn.com/u/lan-se-chong-feng-yi-2/"
-                title="LeetCode"
+                href="https://twitter.com"
+                title="Twitter"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LeetCode
+                Twitter
               </a>
-              <li className="nav-about" role="menuitem">
-                <Link to={`/about`}>About</Link>
-              </li>
+              <Link
+                to={`/rss.xml`}
+                title="RSS"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RSS
+              </Link>
             </div>
           </div>
         </div>
