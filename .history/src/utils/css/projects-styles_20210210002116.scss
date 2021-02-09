@@ -1,0 +1,195 @@
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.intro {
+  font-size: 16fr;
+}
+
+.svg {
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+}
+
+
+.projects-page {
+  padding: 2rem 0;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.projects-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 8fr;
+  gap: 3rem 3rem;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-block-link:active,
+.projects-block-link:link,
+.projects-block-link:hover,
+.projects-block-link:visited {
+  color: black;
+	text-decoration: none;
+}
+
+.projects-block {
+  width: 100%;
+  height: auto;
+  word-break: break-all;
+  overflow: hidden;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+  padding: 20px;
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  h4 {
+    color: #212121;
+  }
+
+  p {
+    color: '#707070';
+  }
+
+}
+
+.projects-name-description {
+  padding: 0;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-name {
+  font-family: Product-Sans;
+  font-size: 22px;
+  padding: 20px 10px;
+}
+
+.projects-description {
+  padding: 10px 10px;
+  font-family: Ubuntu;
+  font-size: 18px;
+}
+
+
+.projects-star-fork-lang {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin-bottom: 0;
+}
+
+
+.projects-star-fork {
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+
+    img {
+      margin: 0;
+    }
+
+    svg path {
+      fill: '#000';
+    }
+
+    span {
+      color: '#000';
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.projects-lang {
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  &:first-child {
+    margin-right: 0.5rem;
+  }
+
+  img {
+    margin: 0;
+  }
+
+  svg path {
+    fill: '#000';
+  }
+
+  span {
+    color: '#000';
+    margin-left: 0.5rem;
+  }
+  margin-left: auto;
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+
+@font-face {
+  font-family: 'Avenir-85';
+  src: url("../fonts/avenir-85.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Product-Sans';
+  src: url("../fonts/Product-Sans-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/FuturaPTMedium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poiret-One';
+  src: url("../fonts/PoiretOne-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Park-Lane';
+  src: url("../fonts/park-lane-nf.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Market-Deco';
+  src: url("../fonts/Market_Deco.ttf");
+  font-style: normal;
+  font-weight: normal;
+}

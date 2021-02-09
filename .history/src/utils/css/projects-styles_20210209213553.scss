@@ -1,0 +1,86 @@
+.projects-page {
+  border-style: solid;
+}
+
+.projects-title {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.projects-container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 8fr;
+  gap: 1.2rem 1.2rem;
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projects-block {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.projects-name-description {
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+.projects-fork-star-lang {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.projects-star {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.projects-lang {
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+@font-face {
+  font-family: 'Avenir-85';
+  src: url("../fonts/avenir-85.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+	font-family: Futura;
+	src: url('../fonts/FuturaPTMedium.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poiret-One';
+  src: url("../fonts/PoiretOne-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Park-Lane';
+  src: url("../fonts/park-lane-nf.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Market-Deco';
+  src: url("../fonts/Market_Deco.ttf");
+  font-style: normal;
+  font-weight: normal;
+}

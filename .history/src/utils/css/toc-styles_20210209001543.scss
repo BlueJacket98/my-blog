@@ -1,0 +1,27 @@
+.content-block {
+    width: 18vw;
+    left: 0;
+    top: 80px;
+    max-height: 45vh;
+    left: 10px;
+    top: 0;
+    position: fixed
+  }
+
+.content-inner-block {
+scrollbar-width: thin;
+scrollbar-color: #367ee9;
+overflow: hidden;
+}
+
+
+.content-title {
+
+}
+
+@font-face {
+  font-family: $avenir-85;
+  src: url("../fonts/avenir-85.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
