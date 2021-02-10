@@ -1,0 +1,42 @@
+---
+title: Actor-Critic Algorithm
+category: Computer Science
+date: "2021-02-12"
+thumbnail: ./cover.jpg
+description: Common and useful string matching algorithms. Comes along with LeetCode examples.
+---
+
+## 策略梯度算法
+
+随机策略梯度的计算公式为
+$$
+\nabla_\theta J(\pi_\theta)=E_{s\ \rho^\pi,a\ \pi_\theta}[\nabla_\theta \log\pi_\theta(a|s)Q^\pi(s,a)]
+$$
+利用经验平均估计策略的梯度
+$$
+\nabla_\theta U(\theta)\approx\hat{g}=\frac{1}{m}\sum_{i=1}^m\nabla\theta \log P(\tau;\theta)R(\tau)
+$$
+其由两项组成：
+
+第一项：$\nabla\theta \log P(\tau;theta)$是一个方向向量，而且其为方向$\log P(\tau;\theta)$对于参数$\theta$变化最快的方向，参数在这个方向上更新可以增大或降低$\log P(\tau;\theta)$，即增大或降低轨迹$\tau$的概率$P(\tau;\theta)$。
+
+第二项：$R(\tau)$是一个标量，即$\nabla\theta \log P(\tau;\theta)$的步长，$R(\tau)$越大，向量的步长也越大，$\tau$的概率$P(\tau;\theta)$变化程度也更大。
+
+策略梯度的直观含义是增大高回报轨迹的概率，降低低回报轨迹的概率。
+
+![img](https://pic2.zhimg.com/80/v2-8dbaaa0b69b6ad6a628d83953c527e59_1440w.png)
+
+## Actor-Critic框架
+
+从上面两项的分解可以看出，$R(\tau)$相当于一个评价器Critic，策略的参数调整幅度由其评价。根据Shulman的博士论文，策略梯度可写为
+$$
+g=\mathbb{E}[\sum_{t=0}^\infty \Psi_t\nabla_\theta\log\pi_\theta(a_t|s_t)]
+$$
+其中，$\Psi_t$可以为以下任何一个：
+
+1. $\sum_{t=0}^\infty r_t$：轨迹的总回报
+2. $\sum_{t'=t}^\infty r_{t'}$：动作后的回报
+3. $\sum_{t'=t}^\infty r_{t'}-b(s_t)$：加入基线的形式
+4. $Q^\pi(s_t,a_t)$：状态-行为值函数
+5. $A^\pi(s_t,a_t)$：优势函数
+6. $r_t+V^\pi(s_{t+1})-V^\pi(s_{t})$：TD残差
