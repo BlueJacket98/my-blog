@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostCard from "../components/postCard"
-import ImagesGallery from "../components/images-gallery"
+import ImageGallery from "../components/images-gallery"
 // import "../utils/global.scss"
 import "../utils/normalize.css"
 import "../utils/css/screen.css"
@@ -23,7 +23,7 @@ const BlogIndex = ({ data }, location) => {
       {/* <AwesomeLayout>
         <Gallery />
       </AwesomeLayout> */}
-      <ImagesGallery />
+      <ImageGallery />
     </Layout>
   )
 }

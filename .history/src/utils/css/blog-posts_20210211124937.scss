@@ -116,10 +116,10 @@ $IrvinTextNew          : $irvin-text-new, Helvetica, serif;
 .content-list-div {
 	display: flex;
 	flex-direction: row;
-	height: 400px;
+	height: 320px;
 	position: relative;
 	background-color: rgb(253, 253, 253);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	box-shadow: 10px 10px 5px #c5c5c5;
 	margin: 50px auto 50px auto;
 	// border: 1px solid black;
 }

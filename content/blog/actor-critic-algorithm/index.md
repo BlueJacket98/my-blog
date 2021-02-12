@@ -18,7 +18,7 @@ $$
 $$
 其由两项组成：
 
-第一项：$\nabla\theta \log P(\tau;theta)$是一个方向向量，而且其为方向$\log P(\tau;\theta)$对于参数$\theta$变化最快的方向，参数在这个方向上更新可以增大或降低$\log P(\tau;\theta)$，即增大或降低轨迹$\tau$的概率$P(\tau;\theta)$。
+第一项：$\nabla\theta \log P(\tau;\theta)$是一个方向向量，而且其为方向$\log P(\tau;\theta)$对于参数$\theta$变化最快的方向，参数在这个方向上更新可以增大或降低$\log P(\tau;\theta)$，即增大或降低轨迹$\tau$的概率$P(\tau;\theta)$。
 
 第二项：$R(\tau)$是一个标量，即$\nabla\theta \log P(\tau;\theta)$的步长，$R(\tau)$越大，向量的步长也越大，$\tau$的概率$P(\tau;\theta)$变化程度也更大。
 

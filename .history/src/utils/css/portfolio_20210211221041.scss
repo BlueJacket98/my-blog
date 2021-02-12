@@ -1,0 +1,19 @@
+.image-container {
+  width: 75%;
+  margin: 50px auto;
+  column-count: 2;
+  column-gap: 4rem;
+  text-align:justify;
+  @media (max-width: 960px) {
+    column-count: 1;
+  }
+}
+
+.image-block {
+  margin: 40px 0;
+}
+
+.image-itself {
+  border-radius:20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+}

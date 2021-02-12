@@ -1,16 +1,14 @@
-.my-gallery-class {
-  width: 80%;
+.image-container {
+  width: 75%;
   margin: 50px auto;
-  text-align: center;
-  // text-align:justify;
+  text-align:justify;
   // @media (max-width: 960px) {
   //   column-count: 1;
   // }
 }
 
-.item {
-  padding: 0 2.5% 40px 2.5%;
-  width: 50%;
+.image-block {
+  margin: 0 0 40px 0;
 }
 
 .image-itself-no-blur {
