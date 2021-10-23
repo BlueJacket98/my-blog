@@ -537,14 +537,14 @@ const indexQuery = graphql`
       relativePath: { eq: "fabio-comparelli-696506-unsplash.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
+        fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     medPic: file(relativePath: { eq: "sophia-valkova-30139-unsplash.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
+        fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -553,7 +553,7 @@ const indexQuery = graphql`
       relativePath: { eq: "vladimir-malyutin-98174-unsplash.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 2000, quality: 100) {
+        fluid(maxWidth: 1360) {
           ...GatsbyImageSharpFluid
         }
       }

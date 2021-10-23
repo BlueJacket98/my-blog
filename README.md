@@ -46,20 +46,67 @@ cd .\my-blog\
 gatsby develop
 ```
 
+## Explore
+
+When console outputs
+
+```shell
+success Building development bundle - 0.534s
+```
+
+Go to
+
+```
+localhost:8000
+```
+
+in your browser.
+
 # Features
 
 ## Main Page
 
-List blogs with the background being its header picture.
+- List blogs with the background of its header picture.
+
+- Show title of the blog when hover on the picture.
+- Using 2-1-2-1-... layout
+
+![image-20211023124806151](image-20211023124806151.png)
+
+![homepage2](homepage2.jpg)
 
 ## Blog
 
-List of all blogs.
+- List of all blogs.
+- Display the category, title, abstract of each blog in a card.
+
+![image-20211023125227871](image-20211023125227871.png)
+
+## Blog Content
+
+- Display the content of the blog.
+- Support all syntax in markdown.
+- Support Latex display.
+
+![image-20211023125433691](image-20211023125433691.png)
+
+![image-20211023125441240](image-20211023125441240.png)
 
 ## Projects
 
-List all repositories in Github, showing each repo's title, about, star and fork numbers.
+- List all repositories in Github using Github GraphQL API.
+- Display each repository's title, about, star and fork numbers.
+
+![image-20211023125546793](image-20211023125546793.png)
+
+![image-20211023125551742](image-20211023125551742.png)
 
 ## Portfolio
 
-Calling Google Photos API, listing pictures in a waterfall layout.
+- Display photos from Google Photos album.
+- Hosting backend service querying Google Photos API on Glitch.
+- List pictures in a two column waterfall (mansory) layout.
+
+![image-20211023125835992](image-20211023125835992.png)
+
+![image-20211023125840249](image-20211023125840249.png)

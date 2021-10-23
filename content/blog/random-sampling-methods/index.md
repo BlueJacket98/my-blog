@@ -2,19 +2,17 @@
 title: Random Sampling Methods
 category: Statistics
 date: "2021-02-06"
-thumbnail: ./maxresdefault.jpg
+thumbnail: ./cover.jpg
 description: How we get a sample from a random distribution. From LCG to Gibbs sampling.
 ---
 
 ## Background
 
-> *He sat*, *continuing to look down the nave*, when suddenly the solution to the problem just seemed to present itself. It was so simple, so obvious he just started to laugh...
+> _He sat_, _continuing to look down the nave_, when suddenly the solution to the problem just seemed to present itself. It was so simple, so obvious he just started to laugh...
 >
-> --P.C. Doherty, *Satan in St Mary's*
+> --P.C. Doherty, _Satan in St Mary's_
 
 This post is a brief introduction to various methods of sampling from any given probability distribution. References include textbook and online introductions on Monte Carlo Statistical Methods and Statistical Computing.
-
-
 
 ## Recap
 
@@ -26,6 +24,7 @@ R_n=\frac{x_n}{M}
 $$
 
 Then we have
+
 $$
 R_n\sim U(0,1),\ R_n\in[0,1)
 $$
@@ -37,10 +36,12 @@ Let $X$ be a continuous random variable, in range $(a,b)$, p.d.f. of $X$ is posi
 ### Box-Muller Algorithm
 
 Let random variable i.i.d. $U(0,1)$, then
+
 $$
 X_1=\sqrt{-2logU_1}cos(2\pi U_2)\\
 X_2=\sqrt{-2logU_1}sin(2\pi U_2)
 $$
+
 i.i.d $N(0,1)$.
 
 ### Accept-Reject Method
@@ -60,8 +61,6 @@ For $x^{(t)}=(x_1^{(t)},...,x_p^{(t)})$，Generate
 
 Then $$X^{(t+1)}\to X\sim f$$.
 
-
-
 Sample Code:
 
 ```python
@@ -69,18 +68,18 @@ Sample Code:
 import random
 import math
 import matplotlib.pyplot as plt
- 
+
 def xrange(x):
     return iter(range(x))
- 
+
 def p_ygivenx(x, m1, m2, s1, s2):
     return (random.normalvariate(
         m2 + rho * s2 / s1 * (x - m1), math.sqrt(1 - rho ** 2) * s2))
- 
+
 def p_xgiveny(y, m1, m2, s1, s2):
     return (random.normalvariate(
         m1 + rho * s1 / s2 * (y - m2), math.sqrt(1 - rho ** 2) * s1))
- 
+
 N = 5000
 K = 20
 x_res = []
@@ -89,17 +88,17 @@ m1 = 10
 m2 = -5
 s1 = 5
 s2 = 2
- 
+
 rho = 0.5
 y = m2
- 
+
 for i in xrange(N):
     for j in xrange(K):
         x = p_xgiveny(y, m1, m2, s1, s2)
         y = p_ygivenx(x, m1, m2, s1, s2)
         x_res.append(x)
         y_res.append(y)
- 
+
 num_bins = 50
 plt.hist(x_res, num_bins, normed=1, facecolor='green', alpha=0.5)
 plt.hist(y_res, num_bins, normed=1, facecolor='red', alpha=0.5)

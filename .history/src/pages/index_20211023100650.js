@@ -44,6 +44,7 @@ const BlogIndex = ({ data }, location) => {
     </Layout>
   )
 }
+
 const indexQuery = graphql`
   query {
     site {
@@ -65,7 +66,7 @@ const indexQuery = graphql`
             description
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 2000, quality: 100) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -76,38 +77,6 @@ const indexQuery = graphql`
     }
   }
 `
-// const indexQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//             thumbnail {
-//               childImageSharp {
-//                 fluid {
-//                   ...GatsbyImageSharpFluid
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
 
 export default props => (
   <StaticQuery
