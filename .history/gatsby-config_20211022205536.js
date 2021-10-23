@@ -89,18 +89,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     // `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-postcss`,
-    //   options: {
-    //     postCssPlugins: [
-    //       require("postcss-easy-import")(),
-    //       require("postcss-custom-properties")({ preserve: false }),
-    //       require("postcss-color-function")(),
-    //       require("autoprefixer")({ browsers: ["last 2 versions"] }),
-    //     ],
-    //   },
-    // },
+    // `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require("postcss-easy-import")(),
+          require("postcss-custom-properties")({ preserve: false }),
+          require("postcss-color-function")(),
+          require("autoprefixer")({ browsers: ["last 2 versions"] }),
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

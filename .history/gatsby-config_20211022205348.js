@@ -78,7 +78,6 @@ module.exports = {
               className: "table-of-contents",
             },
           },
-
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
@@ -90,17 +89,17 @@ module.exports = {
     // `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-postcss`,
-    //   options: {
-    //     postCssPlugins: [
-    //       require("postcss-easy-import")(),
-    //       require("postcss-custom-properties")({ preserve: false }),
-    //       require("postcss-color-function")(),
-    //       require("autoprefixer")({ browsers: ["last 2 versions"] }),
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require("postcss-easy-import")(),
+          require("postcss-custom-properties")({ preserve: false }),
+          require("postcss-color-function")(),
+          require("autoprefixer")({ browsers: ["last 2 versions"] }),
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {

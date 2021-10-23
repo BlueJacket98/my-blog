@@ -60,13 +60,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          {
-            resolve: `gatsby-remark-katex`,
-            options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
-              strict: `ignore`,
-            },
-          },
+          // {
+          //   resolve: `gatsby-remark-katex`,
+          //   options: {
+          //     // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+          //     strict: `ignore`
+          //   }
+          // },
           {
             resolve: `gatsby-remark-table-of-contents`,
             options: {
@@ -90,17 +90,17 @@ module.exports = {
     // `gatsby-plugin-emotion`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-postcss`,
-    //   options: {
-    //     postCssPlugins: [
-    //       require("postcss-easy-import")(),
-    //       require("postcss-custom-properties")({ preserve: false }),
-    //       require("postcss-color-function")(),
-    //       require("autoprefixer")({ browsers: ["last 2 versions"] }),
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require("postcss-easy-import")(),
+          require("postcss-custom-properties")({ preserve: false }),
+          require("postcss-color-function")(),
+          require("autoprefixer")({ browsers: ["last 2 versions"] }),
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
