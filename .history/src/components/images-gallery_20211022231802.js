@@ -34,7 +34,11 @@ const ImagesGallery = () => {
     <Masonry
       className={"my-gallery-class"} // default ''
       elementType={"div"} // default 'div'
-      options={{ transitionDuration: 5, transitionProperty: "width" }} // default {}
+      options={{
+        transitionDuration: 5,
+        transitionProperty: "width",
+        columnWidth: "50%",
+      }} // default {}
       disableImagesLoaded={false} // default false
       updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
     >
